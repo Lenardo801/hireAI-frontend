@@ -1,5 +1,6 @@
 // src/components/Home.jsx
 import "./Home.css";
+import heroImage from "../assets/hero.jpeg";
 
 function Home({
   goLogin,
@@ -12,7 +13,7 @@ function Home({
     <div className="home-container">
       {/* ================= HERO & NAVBAR WRAPPER ================= */}
       <div className="hero-wrapper">
-        
+
         {/* Navbar */}
         <nav className="hireai-navbar">
           <div className="nav-logo">
@@ -38,7 +39,7 @@ function Home({
           <div className="hero-text-section">
             <h1>Find Your Dream Job</h1>
             <p>Connect with top companies and take the next step in your career. HireAI helps you find the right opportunities, faster.</p>
-            
+
             {/* Search Bar */}
             <div className="hero-search-box">
               <div className="search-input-group">
@@ -83,15 +84,25 @@ function Home({
               </div>
             </div>
           </div>
-          
+
+         
           <div className="hero-image-section">
-            {/* Using a stylized block to represent the hero image from the design */}
             <div className="hero-illustration">
-               <div className="floating-badge">
-                  Better<br/>Opportunities<br/>Bigger Dreams
-               </div>
+              <img
+                src={heroImage}
+                alt="HireAI Career Opportunities"
+                className="hero-image"
+              />
+
+              {/* <div className="floating-badge">
+                Better<br />
+                Opportunities<br />
+                Bigger Dreams
+              </div> */}
             </div>
           </div>
+          
+
         </div>
       </div>
 
