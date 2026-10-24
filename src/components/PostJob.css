@@ -1,0 +1,252 @@
+.post-job-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+/* Header */
+
+.post-job-header {
+  background: #0b1220;
+  color: white;
+  padding: 55px 8%;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.post-job-logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.post-job-logo span {
+  color: #2563eb;
+}
+
+.post-job-header p {
+  margin: 0 0 8px;
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.post-job-header h1 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.post-job-header span {
+  display: block;
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+/* Main */
+
+.post-job-main {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.post-job-card {
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.post-job-title {
+  margin-bottom: 35px;
+}
+
+.post-job-title p {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.post-job-title h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #111827;
+}
+
+.post-job-title span {
+  display: block;
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+/* Form */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 7px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Buttons */
+
+.post-job-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 25px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cancel-job-btn,
+.submit-job-btn {
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancel-job-btn {
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.cancel-job-btn:hover {
+  background: #f3f4f6;
+}
+
+.submit-job-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+.submit-job-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.submit-job-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Footer */
+
+.post-job-footer {
+  background: #0b1220;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  margin-top: 60px;
+}
+
+.post-job-footer strong {
+  font-size: 22px;
+}
+
+.post-job-footer strong span {
+  color: #60a5fa;
+}
+
+.post-job-footer p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.post-job-footer small {
+  color: #64748b;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+  .post-job-header {
+    padding: 40px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .post-job-header h1 {
+    font-size: 30px;
+  }
+
+  .post-job-main {
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .post-job-card {
+    padding: 25px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .post-job-actions {
+    gap: 12px;
+  }
+
+  .cancel-job-btn,
+  .submit-job-btn {
+    width: 50%;
+  }
+}

@@ -1,0 +1,198 @@
+/* src/components/RecruiterApplications.css */
+
+/* Reusing dashboard layout styles */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f7fe;
+  color: #111827;
+  overflow: hidden;
+}
+
+/* Sidebar and Topbar */
+.sidebar { width: 260px; background-color: #0b132b; color: #ffffff; display: flex; flex-direction: column; transition: all 0.3s ease; flex-shrink: 0; }
+.sidebar-brand { display: flex; align-items: center; gap: 10px; padding: 25px; font-size: 24px; font-weight: 500; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.brand-icon { background: #2563eb; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 700; font-size: 18px; }
+.sidebar-profile { display: flex; align-items: center; gap: 15px; padding: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.profile-avatar { width: 45px; height: 45px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: white; }
+.profile-info h4 { margin: 0 0 4px 0; font-size: 15px; font-weight: 600; }
+.profile-info span { font-size: 12px; color: #9ca3af; }
+.sidebar-nav { padding: 20px 15px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.nav-item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 15px; background: transparent; border: none; color: #9ca3af; font-size: 15px; font-weight: 500; border-radius: 8px; cursor: pointer; text-align: left; transition: all 0.2s; }
+.nav-item:hover { background: rgba(255, 255, 255, 0.05); color: white; }
+.nav-item.active { background: #2563eb; color: white; }
+.sidebar-footer { padding: 20px 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.logout-btn:hover { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.topbar { height: 75px; background: #ffffff; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; border-bottom: 1px solid #e5e7eb; }
+.topbar h2 { margin: 0; font-size: 20px; color: #111827; font-weight: 700; }
+.topbar-profile-pic { width: 35px; height: 35px; background: #111827; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.dashboard-scrollable { padding: 30px; overflow-y: auto; flex: 1; }
+
+.back-btn-modern {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #475569;
+}
+.back-btn-modern:hover { background: #f1f5f9; }
+
+/* Headers & States */
+.page-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.page-header-row h3 { margin: 0 0 5px 0; font-size: 22px; color: #111827; }
+.page-header-row p { margin: 0; color: #64748b; font-size: 14px; }
+.count-badge { background: #eff6ff; color: #2563eb; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+
+.error-banner { background: #fef2f2; color: #991b1b; padding: 15px; border-radius: 8px; border: 1px solid #fecaca; margin-bottom: 20px; font-size: 14px; }
+
+.empty-state-box { background: white; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 60px 20px; text-align: center; }
+.empty-icon { font-size: 40px; margin-bottom: 15px; display: block; }
+.empty-state-box h3 { margin: 0 0 10px; color: #1e293b; }
+.empty-state-box p { margin: 0; color: #64748b; font-size: 14px; }
+
+/* Applications List */
+.ra-list-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ra-card-modern {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ra-card-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  border-color: #bfdbfe;
+}
+
+/* Col 1: Candidate */
+.ra-cand-col {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.ra-avatar-md {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.ra-info h3 { margin: 0 0 6px 0; font-size: 16px; color: #111827; }
+.ra-info p { margin: 0 0 4px 0; font-size: 13px; color: #64748b; }
+.ra-info small { font-size: 11px; color: #94a3b8; }
+
+/* Col 2: AI Score */
+.ra-score-col {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+.score-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.score-header span { font-size: 11px; font-weight: 700; color: #64748b; }
+.score-header strong { font-size: 20px; font-weight: 700; color: #2563eb; }
+.score-progress { width: 100%; height: 6px; background: #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 6px; }
+.score-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #10b981); border-radius: 10px; }
+.ra-score-col small { font-size: 11px; color: #94a3b8; }
+
+/* Col 3: Status & Resume */
+.ra-status-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.status-row { display: flex; align-items: center; gap: 10px; }
+.status-row .label { font-size: 12px; color: #64748b; font-weight: 600; }
+
+.status-badge-modern { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: capitalize; }
+.status-badge-modern.applied { background: #f1f5f9; color: #475569; }
+.status-badge-modern.shortlisted { background: #dcfce7; color: #166534; }
+.status-badge-modern.interview { background: #fef3c7; color: #92400e; }
+.status-badge-modern.selected { background: #d1fae5; color: #065f46; }
+.status-badge-modern.rejected { background: #fee2e2; color: #b91c1c; }
+
+.btn-outline-blue-small { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: #eff6ff; color: #2563eb; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; width: fit-content; transition: 0.2s;}
+.btn-outline-blue-small:hover { background: #dbeafe; }
+.no-resume-text { font-size: 12px; color: #94a3b8; }
+
+/* Bottom Row: Actions */
+.ra-actions-row {
+  grid-column: 1 / -1;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-action:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-action.shortlist { background: #ecfdf5; color: #047857; }
+.btn-action.shortlist:hover:not(:disabled) { background: #d1fae5; }
+
+.btn-action.select { background: #ede9fe; color: #6d28d9; }
+.btn-action.select:hover:not(:disabled) { background: #ddd6fe; }
+
+.btn-action.reject { background: #fef2f2; color: #dc2626; }
+.btn-action.reject:hover:not(:disabled) { background: #fee2e2; }
+
+.btn-action.schedule { background: #2563eb; color: white; }
+.btn-action.schedule:hover { background: #1d4ed8; }
+
+.result-text { font-size: 14px; font-weight: 600; }
+.result-text.success { color: #059669; }
+.result-text.error { color: #dc2626; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .ra-card-modern { grid-template-columns: 1fr 1fr; }
+  .ra-actions-row { justify-content: flex-start; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; padding: 10px; }
+  .sidebar-profile, .sidebar-footer { display: none; }
+  .sidebar-nav { flex-direction: row; justify-content: center; padding: 0; }
+  .nav-item { width: auto; padding: 8px 12px; }
+  
+  .ra-card-modern { grid-template-columns: 1fr; gap: 15px;}
+  .action-buttons-group { flex-wrap: wrap; }
+}

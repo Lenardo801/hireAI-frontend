@@ -1,0 +1,184 @@
+/* src/components/Applications.css */
+
+/* Reusing the dashboard layout from CandidateDashboard.css for consistency */
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f7fe;
+  color: #111827;
+  overflow: hidden;
+}
+
+/* Sidebar and Topbar styles are exactly the same as Dashboard */
+.sidebar {
+  width: 260px;
+  background-color: #0b132b;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+.sidebar-brand { display: flex; align-items: center; gap: 10px; padding: 25px; font-size: 24px; font-weight: 500; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.brand-icon { background: #2563eb; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-weight: 700; font-size: 18px; }
+.sidebar-profile { display: flex; align-items: center; gap: 15px; padding: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.profile-avatar { width: 45px; height: 45px; background-color: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: white; }
+.profile-info h4 { margin: 0 0 4px 0; font-size: 15px; font-weight: 600; }
+.profile-info span { font-size: 12px; color: #9ca3af; }
+.sidebar-nav { padding: 20px 15px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.nav-item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 15px; background: transparent; border: none; color: #9ca3af; font-size: 15px; font-weight: 500; border-radius: 8px; cursor: pointer; text-align: left; transition: all 0.2s; }
+.nav-item:hover { background: rgba(255, 255, 255, 0.05); color: white; }
+.nav-item.active { background: #2563eb; color: white; }
+.sidebar-footer { padding: 20px 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.logout-btn:hover { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+.main-content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+.topbar { height: 75px; background: #ffffff; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; border-bottom: 1px solid #e5e7eb; }
+.topbar h2 { margin: 0; font-size: 20px; color: #111827; font-weight: 700; }
+.topbar-profile-pic { width: 35px; height: 35px; background: #111827; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.dashboard-scrollable { padding: 30px; overflow-y: auto; flex: 1; }
+
+/* Page Specific Header */
+.page-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.page-header-row h3 { margin: 0 0 5px 0; font-size: 22px; color: #111827; }
+.page-header-row p { margin: 0; color: #64748b; font-size: 14px; }
+.count-badge { background: #eff6ff; color: #2563eb; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+
+/* Empty State */
+.empty-state-box {
+  background: white;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+}
+.empty-icon { font-size: 40px; margin-bottom: 15px; }
+.empty-state-box h3 { margin: 0 0 10px; color: #1e293b; }
+.empty-state-box p { margin: 0; color: #64748b; font-size: 14px; }
+.btn-primary { background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+/* Applications List */
+.applications-grid-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.application-modern-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 0.5fr;
+  gap: 25px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: transform 0.2s;
+}
+
+.application-modern-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  border-color: #bfdbfe;
+}
+
+/* Col 1: Job Info */
+.app-job-col {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+.app-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.app-logo.blue { background: #2563eb; }
+
+.app-job-details h3 { margin: 0 0 5px 0; font-size: 16px; color: #111827; }
+.app-company { margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: #475569; }
+.app-meta { display: flex; gap: 15px; margin-bottom: 8px; font-size: 12px; color: #64748b; }
+.app-date { font-size: 11px; color: #94a3b8; }
+
+/* Col 2: AI Score */
+.app-score-col {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+}
+.score-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.score-header-row span { font-size: 11px; font-weight: 700; color: #64748b; letter-spacing: 0.5px; }
+.score-header-row strong { font-size: 20px; font-weight: 700; color: #2563eb; }
+.score-progress-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 6px; }
+.score-progress-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #10b981); border-radius: 10px; }
+.app-score-col small { font-size: 11px; color: #94a3b8; }
+
+/* Col 3: Status */
+.app-status-col {
+  padding: 0 10px;
+}
+.status-label-top { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 12px; letter-spacing: 0.5px; }
+
+/* Status Tracker Styles */
+.tracker-wrapper { width: 100%; margin-bottom: 10px; }
+.status-tracker { display: flex; align-items: flex-start; width: 100%; }
+.status-tracker-item { display: flex; align-items: flex-start; flex: 1; }
+.status-step { display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 50px; }
+.status-step span { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; background: #e2e8f0; color: #64748b; border-radius: 50%; font-size: 10px; font-weight: 700; }
+.status-step small { font-size: 10px; color: #94a3b8; font-weight: 600; }
+.status-step.completed span { background: #2563eb; color: white; }
+.status-step.completed small { color: #2563eb; }
+.status-line { flex: 1; height: 2px; background: #e2e8f0; margin-top: 11px; min-width: 15px; }
+.status-line.completed { background: #2563eb; }
+
+/* Rejected Tracker Styles */
+.rejected-tracker .status-line { background: #ef4444; }
+.rejected-tracker .rejected-step span { background: #ef4444; color: white; }
+.rejected-tracker .rejected-step small { color: #ef4444; }
+
+.status-text-current { font-size: 12px; color: #64748b; margin-top: 5px; }
+.status-text-current.applied strong { color: #2563eb; }
+.status-text-current.shortlisted strong { color: #16a34a; }
+.status-text-current.interview strong { color: #7c3aed; }
+.status-text-current.rejected strong { color: #ef4444; }
+
+/* Col 4: Action */
+.app-action-col {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-outline-blue { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; background: #eff6ff; color: #2563eb; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: 0.2s; white-space: nowrap; }
+.btn-outline-blue:hover { background: #dbeafe; }
+.no-resume-text { font-size: 13px; color: #94a3b8; }
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .application-modern-card { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .app-action-col { justify-content: flex-start; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; padding: 10px; }
+  .sidebar-profile, .sidebar-footer { display: none; }
+  .sidebar-nav { flex-direction: row; justify-content: center; padding: 0; }
+  .nav-item { width: auto; padding: 8px 12px; }
+  
+  .application-modern-card { grid-template-columns: 1fr; }
+  .page-header-row { flex-direction: column; align-items: flex-start; gap: 15px; }
+}

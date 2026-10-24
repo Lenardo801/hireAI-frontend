@@ -1,0 +1,417 @@
+/* src/components/Home.css */
+
+.home-container {
+  width: 100%;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* ========================================
+   HERO & NAVBAR WRAPPER (Dark Navy)
+======================================== */
+.hero-wrapper {
+  background-color: #0b132b; /* Deep Navy Blue */
+  color: #ffffff;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navbar */
+.hireai-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logo-icon {
+  background: #2563eb;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.nav-logo span strong {
+  font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #d1d5db;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #ffffff;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-text {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 6%;
+  gap: 40px;
+}
+
+.hero-text-section {
+  flex: 1;
+  max-width: 650px;
+}
+
+.hero-text-section h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-text-section p {
+  font-size: 18px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 550px;
+}
+
+/* Search Box */
+.hero-search-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  flex: 1;
+  gap: 10px;
+}
+
+.search-input-group input,
+.search-input-group select {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: #111827;
+  background: transparent;
+  padding: 10px 0;
+}
+
+.search-divider {
+  width: 1px;
+  height: 30px;
+  background: #e5e7eb;
+}
+
+.btn-search {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-search:hover {
+  background: #1d4ed8;
+}
+
+/* Hero Tags */
+.hero-tags {
+  display: flex;
+  gap: 30px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag-icon {
+  font-size: 24px;
+}
+
+.tag-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-text strong {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.tag-text span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Hero Image Placeholder */
+.hero-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-illustration {
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  background: linear-gradient(145deg, rgba(37, 99, 235, 0.2), rgba(11, 19, 43, 0));
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.floating-badge {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+
+/* ========================================
+   LATEST JOBS SECTION
+======================================== */
+.latest-jobs-section {
+  padding: 60px 6%;
+  background-color: #f8fafc;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 24px;
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+}
+
+.view-all-btn {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  text-decoration: underline;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.job-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-color: #bfdbfe;
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 18px;
+}
+
+.blue-logo { background: #2563eb; }
+.green-logo { background: #10b981; }
+.purple-logo { background: #8b5cf6; }
+.pink-logo { background: #ec4899; }
+
+.featured-badge {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.job-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.company-name {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.job-meta {
+  color: #9ca3af;
+  font-size: 13px;
+  margin: 0 0 20px 0;
+}
+
+.job-skills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.job-skills span {
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text-section {
+    max-width: 100%;
+  }
+
+  .hero-text-section p {
+    margin: 0 auto 30px auto;
+  }
+
+  .hero-search-box {
+    flex-direction: column;
+    background: transparent;
+    box-shadow: none;
+    gap: 10px;
+  }
+
+  .search-input-group {
+    background: white;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .search-divider {
+    display: none;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+
+  .hero-tags {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
